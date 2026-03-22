@@ -7,7 +7,7 @@ const theme = create({
   // Brand
   brandTitle: 'Atlas',
   brandUrl: 'https://tickertapenews.io',
-  brandImage: 'https://tickertapenews.github.io/atlas/atlas-logo.svg',
+  brandImage: 'https://tickertapenews.github.io/atlas/atlas-logo.png',
 
   // Colors
   colorPrimary: '#9500FF',
