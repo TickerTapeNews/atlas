@@ -5,7 +5,7 @@ const theme = create({
   base: 'light',
 
   // Brand
-  brandTitle: 'Ticker tape Atlas',
+  brandTitle: 'Atlas',
   brandUrl: 'https://tickertapenews.io',
   brandImage: 'atlas-logo.svg',
 
