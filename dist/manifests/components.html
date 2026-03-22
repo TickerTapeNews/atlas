@@ -576,7 +576,7 @@
 <header>
   <div class="wrap">
     <h1>Manifest Debugger</h1>
-    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">4 docs ok</a></div>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">5 docs ok</a></div>
   </div>
 </header>
 <main>
@@ -824,10 +824,176 @@ export const Flag = ({ code, name }) =&gt; (
   aria-label="Docs">
   <div class="head">
     <div class="title">
+      <h2><span class="status-dot dot-ok"></span> Assets/Icons</h2>
+      <div class="badges">
+        
+        <label for="doc-2-assets-icons-docs-content" class="badge ok as-toggle">view content</label>
+      </div>
+    </div>
+    <div class="meta" title="./stories/Icons.mdx">assets-icons--docs · ./stories/Icons.mdx</div>
+    
+  </div>
+
+  <!-- Hidden toggles must be siblings BEFORE .panels -->
+  
+  <input id="doc-2-assets-icons-docs-content" class="tg tg-content" type="checkbox" hidden />
+
+  <div class="panels">
+    
+    
+        <div class="panel panel-content">
+          <div class="mdx-content">
+            <pre><code>import { Meta } from &#39;@storybook/addon-docs/blocks&#39;;
+
+&lt;Meta title=&quot;Assets/Icons&quot; /&gt;
+
+# Icons
+
+1,383 regular + 288 solid SVG icons from [Iconoir](https://iconoir.com) (v7.11, MIT license).
+
+export const Icon = ({ name, style = &#39;regular&#39; }) =&gt; (
+  &lt;div style={{
+    display: &#39;inline-flex&#39;,
+    flexDirection: &#39;column&#39;,
+    alignItems: &#39;center&#39;,
+    gap: &#39;6px&#39;,
+    padding: &#39;12px 8px&#39;,
+    width: &#39;100px&#39;,
+    textAlign: &#39;center&#39;,
+    borderRadius: &#39;6px&#39;,
+    cursor: &#39;default&#39;,
+  }}&gt;
+    &lt;img
+      src={`https://tickertapenews.github.io/atlas/icons/${style}/${name}.svg`}
+      alt={name}
+      style={{ width: &#39;24px&#39;, height: &#39;24px&#39; }}
+    /&gt;
+    &lt;span style={{ fontSize: &#39;10px&#39;, color: &#39;rgba(15,15,15,0.45)&#39;, wordBreak: &#39;break-all&#39;, lineHeight: 1.3 }}&gt;{name}&lt;/span&gt;
+  &lt;/div&gt;
+);
+
+## Navigation
+
+&lt;div style={{ display: &#39;flex&#39;, flexWrap: &#39;wrap&#39;, gap: &#39;2px&#39; }}&gt;
+  &lt;Icon name=&quot;arrow-left&quot; /&gt;
+  &lt;Icon name=&quot;arrow-right&quot; /&gt;
+  &lt;Icon name=&quot;arrow-up&quot; /&gt;
+  &lt;Icon name=&quot;arrow-down&quot; /&gt;
+  &lt;Icon name=&quot;arrow-up-right&quot; /&gt;
+  &lt;Icon name=&quot;home&quot; /&gt;
+  &lt;Icon name=&quot;home-simple&quot; /&gt;
+  &lt;Icon name=&quot;search&quot; /&gt;
+  &lt;Icon name=&quot;filter&quot; /&gt;
+  &lt;Icon name=&quot;filter-list&quot; /&gt;
+  &lt;Icon name=&quot;share-ios&quot; /&gt;
+  &lt;Icon name=&quot;bookmark&quot; /&gt;
+&lt;/div&gt;
+
+## Actions
+
+&lt;div style={{ display: &#39;flex&#39;, flexWrap: &#39;wrap&#39;, gap: &#39;2px&#39; }}&gt;
+  &lt;Icon name=&quot;plus&quot; /&gt;
+  &lt;Icon name=&quot;minus&quot; /&gt;
+  &lt;Icon name=&quot;check&quot; /&gt;
+  &lt;Icon name=&quot;check-circle&quot; /&gt;
+  &lt;Icon name=&quot;edit&quot; /&gt;
+  &lt;Icon name=&quot;edit-pencil&quot; /&gt;
+  &lt;Icon name=&quot;trash&quot; /&gt;
+  &lt;Icon name=&quot;download&quot; /&gt;
+  &lt;Icon name=&quot;upload&quot; /&gt;
+  &lt;Icon name=&quot;eye&quot; /&gt;
+  &lt;Icon name=&quot;eye-closed&quot; /&gt;
+  &lt;Icon name=&quot;lock&quot; /&gt;
+&lt;/div&gt;
+
+## Communication
+
+&lt;div style={{ display: &#39;flex&#39;, flexWrap: &#39;wrap&#39;, gap: &#39;2px&#39; }}&gt;
+  &lt;Icon name=&quot;mail&quot; /&gt;
+  &lt;Icon name=&quot;mail-open&quot; /&gt;
+  &lt;Icon name=&quot;bell&quot; /&gt;
+  &lt;Icon name=&quot;bell-notification&quot; /&gt;
+  &lt;Icon name=&quot;bell-off&quot; /&gt;
+&lt;/div&gt;
+
+## User
+
+&lt;div style={{ display: &#39;flex&#39;, flexWrap: &#39;wrap&#39;, gap: &#39;2px&#39; }}&gt;
+  &lt;Icon name=&quot;user&quot; /&gt;
+  &lt;Icon name=&quot;user-circle&quot; /&gt;
+  &lt;Icon name=&quot;user-plus&quot; /&gt;
+  &lt;Icon name=&quot;user-star&quot; /&gt;
+  &lt;Icon name=&quot;user-badge-check&quot; /&gt;
+&lt;/div&gt;
+
+## Finance
+
+&lt;div style={{ display: &#39;flex&#39;, flexWrap: &#39;wrap&#39;, gap: &#39;2px&#39; }}&gt;
+  &lt;Icon name=&quot;dollar&quot; /&gt;
+  &lt;Icon name=&quot;dollar-circle&quot; /&gt;
+  &lt;Icon name=&quot;euro&quot; /&gt;
+  &lt;Icon name=&quot;graph-up&quot; /&gt;
+  &lt;Icon name=&quot;graph-down&quot; /&gt;
+  &lt;Icon name=&quot;chart-line&quot; /&gt;
+  &lt;Icon name=&quot;stats-up-square&quot; /&gt;
+  &lt;Icon name=&quot;stats-down-square&quot; /&gt;
+&lt;/div&gt;
+
+## Time
+
+&lt;div style={{ display: &#39;flex&#39;, flexWrap: &#39;wrap&#39;, gap: &#39;2px&#39; }}&gt;
+  &lt;Icon name=&quot;clock&quot; /&gt;
+  &lt;Icon name=&quot;calendar&quot; /&gt;
+  &lt;Icon name=&quot;calendar-check&quot; /&gt;
+  &lt;Icon name=&quot;calendar-plus&quot; /&gt;
+&lt;/div&gt;
+
+## Media
+
+&lt;div style={{ display: &#39;flex&#39;, flexWrap: &#39;wrap&#39;, gap: &#39;2px&#39; }}&gt;
+  &lt;Icon name=&quot;star&quot; /&gt;
+  &lt;Icon name=&quot;heart&quot; /&gt;
+  &lt;Icon name=&quot;settings&quot; /&gt;
+  &lt;Icon name=&quot;airplay&quot; /&gt;
+&lt;/div&gt;
+
+---
+
+### Formats
+
+| Style | Count | Path |
+|-------|-------|------|
+| Regular (outline) | 1,383 | `/icons/regular/{name}.svg` |
+| Solid (filled) | 288 | `/icons/solid/{name}.svg` |
+
+### Usage
+
+```html
+&lt;!-- Regular --&gt;
+&lt;img src=&quot;https://tickertapenews.github.io/atlas/icons/regular/search.svg&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;
+
+&lt;!-- Solid --&gt;
+&lt;img src=&quot;https://tickertapenews.github.io/atlas/icons/solid/heart.svg&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;
+```
+
+### Browse all icons
+
+See the full catalogue at [iconoir.com](https://iconoir.com). All icons are hosted at `/icons/regular/{name}.svg` using the same filenames.
+</code></pre>
+          </div>
+        </div>
+  </div>
+</article>
+<article
+  class="card is-doc no-doc-error"
+  role="listitem"
+  aria-label="Docs">
+  <div class="head">
+    <div class="title">
       <h2><span class="status-dot dot-ok"></span> Introduction</h2>
       <div class="badges">
         
-        <label for="doc-2-introduction-docs-content" class="badge ok as-toggle">view content</label>
+        <label for="doc-3-introduction-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
     <div class="meta" title="./stories/Introduction.mdx">introduction--docs · ./stories/Introduction.mdx</div>
@@ -836,7 +1002,7 @@ export const Flag = ({ code, name }) =&gt; (
 
   <!-- Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="doc-2-introduction-docs-content" class="tg tg-content" type="checkbox" hidden />
+  <input id="doc-3-introduction-docs-content" class="tg tg-content" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -894,7 +1060,7 @@ Flag usage:
       <h2><span class="status-dot dot-ok"></span> Tokens/Typography</h2>
       <div class="badges">
         
-        <label for="doc-3-tokens-typography-docs-content" class="badge ok as-toggle">view content</label>
+        <label for="doc-4-tokens-typography-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
     <div class="meta" title="./stories/Typography.mdx">tokens-typography--docs · ./stories/Typography.mdx</div>
@@ -903,7 +1069,7 @@ Flag usage:
 
   <!-- Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="doc-3-tokens-typography-docs-content" class="tg tg-content" type="checkbox" hidden />
+  <input id="doc-4-tokens-typography-docs-content" class="tg tg-content" type="checkbox" hidden />
 
   <div class="panels">
     
