@@ -1,0 +1,136 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Assets/Icons" />
+
+# Icons
+
+1,383 regular + 288 solid SVG icons from [Iconoir](https://iconoir.com) (v7.11, MIT license).
+
+export const Icon = ({ name, style = 'regular' }) => (
+  <div style={{
+    display: 'inline-flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '6px',
+    padding: '12px 8px',
+    width: '100px',
+    textAlign: 'center',
+    borderRadius: '6px',
+    cursor: 'default',
+  }}>
+    <img
+      src={`https://tickertapenews.github.io/atlas/icons/${style}/${name}.svg`}
+      alt={name}
+      style={{ width: '24px', height: '24px' }}
+    />
+    <span style={{ fontSize: '10px', color: 'rgba(15,15,15,0.45)', wordBreak: 'break-all', lineHeight: 1.3 }}>{name}</span>
+  </div>
+);
+
+## Navigation
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px' }}>
+  <Icon name="arrow-left" />
+  <Icon name="arrow-right" />
+  <Icon name="arrow-up" />
+  <Icon name="arrow-down" />
+  <Icon name="arrow-up-right" />
+  <Icon name="home" />
+  <Icon name="home-simple" />
+  <Icon name="search" />
+  <Icon name="filter" />
+  <Icon name="filter-list" />
+  <Icon name="share-ios" />
+  <Icon name="bookmark" />
+</div>
+
+## Actions
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px' }}>
+  <Icon name="plus" />
+  <Icon name="minus" />
+  <Icon name="check" />
+  <Icon name="check-circle" />
+  <Icon name="edit" />
+  <Icon name="edit-pencil" />
+  <Icon name="trash" />
+  <Icon name="download" />
+  <Icon name="upload" />
+  <Icon name="eye" />
+  <Icon name="eye-closed" />
+  <Icon name="lock" />
+</div>
+
+## Communication
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px' }}>
+  <Icon name="mail" />
+  <Icon name="mail-open" />
+  <Icon name="bell" />
+  <Icon name="bell-notification" />
+  <Icon name="bell-off" />
+</div>
+
+## User
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px' }}>
+  <Icon name="user" />
+  <Icon name="user-circle" />
+  <Icon name="user-plus" />
+  <Icon name="user-star" />
+  <Icon name="user-badge-check" />
+</div>
+
+## Finance
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px' }}>
+  <Icon name="dollar" />
+  <Icon name="dollar-circle" />
+  <Icon name="euro" />
+  <Icon name="graph-up" />
+  <Icon name="graph-down" />
+  <Icon name="chart-line" />
+  <Icon name="stats-up-square" />
+  <Icon name="stats-down-square" />
+</div>
+
+## Time
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px' }}>
+  <Icon name="clock" />
+  <Icon name="calendar" />
+  <Icon name="calendar-check" />
+  <Icon name="calendar-plus" />
+</div>
+
+## Media
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px' }}>
+  <Icon name="star" />
+  <Icon name="heart" />
+  <Icon name="settings" />
+  <Icon name="airplay" />
+</div>
+
+---
+
+### Formats
+
+| Style | Count | Path |
+|-------|-------|------|
+| Regular (outline) | 1,383 | `/icons/regular/{name}.svg` |
+| Solid (filled) | 288 | `/icons/solid/{name}.svg` |
+
+### Usage
+
+```html
+<!-- Regular -->
+<img src="https://tickertapenews.github.io/atlas/icons/regular/search.svg" width="24" height="24">
+
+<!-- Solid -->
+<img src="https://tickertapenews.github.io/atlas/icons/solid/heart.svg" width="24" height="24">
+```
+
+### Browse all icons
+
+See the full catalogue at [iconoir.com](https://iconoir.com). All icons are hosted at `/icons/regular/{name}.svg` using the same filenames.
