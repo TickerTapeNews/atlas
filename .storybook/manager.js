@@ -5,8 +5,9 @@ const theme = create({
   base: 'light',
 
   // Brand
-  brandTitle: 'Atlas Design System',
+  brandTitle: 'Ticker tape Atlas',
   brandUrl: 'https://tickertapenews.io',
+  brandImage: 'atlas-logo.svg',
 
   // Colors
   colorPrimary: '#9500FF',
