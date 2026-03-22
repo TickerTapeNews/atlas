@@ -10,38 +10,41 @@ const theme = create({
   brandImage: 'https://tickertapenews.github.io/atlas/atlas-logo.png',
 
   // Colors
-  colorPrimary: '#9500FF',
-  colorSecondary: '#9500FF',
+  colorPrimary: '#000000',
+  colorSecondary: '#000000',
 
   // UI
-  appBg: '#F4F4F4',
+  appBg: '#FFFFFF',
   appContentBg: '#FFFFFF',
   appPreviewBg: '#FFFFFF',
-  appBorderColor: 'rgba(15,15,15,0.08)',
-  appBorderRadius: 6,
+  appBorderColor: '#EBEBEB',
+  appBorderRadius: 10,
 
   // Text
-  textColor: '#0F0F0F',
-  textInverseColor: '#FAFAFA',
-  textMutedColor: 'rgba(15,15,15,0.5)',
+  textColor: '#000000',
+  textInverseColor: '#FFFFFF',
+  textMutedColor: 'rgba(0,0,0,0.5)',
 
   // Toolbar
-  barTextColor: 'rgba(15,15,15,0.5)',
-  barSelectedColor: '#9500FF',
-  barHoverColor: '#0F0F0F',
+  barTextColor: 'rgba(0,0,0,0.5)',
+  barSelectedColor: '#000000',
+  barHoverColor: '#000000',
   barBg: '#FFFFFF',
 
   // Typography
   fontBase: '"Figtree", sans-serif',
-  fontCode: 'monospace',
+  fontCode: '"SF Mono", "Fira Code", monospace',
 
   // Inputs
   inputBg: '#FFFFFF',
-  inputBorder: 'rgba(15,15,15,0.12)',
-  inputTextColor: '#0F0F0F',
-  inputBorderRadius: 4,
+  inputBorder: '#EBEBEB',
+  inputTextColor: '#000000',
+  inputBorderRadius: 6,
 });
 
 addons.setConfig({
   theme,
+  sidebar: {
+    showRoots: true,
+  },
 });
