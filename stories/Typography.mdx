@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Typography" />
+
+# Typography
+
+Atlas uses **Figtree** — a variable Google Font supporting weights 300–900 with italic.
+
+export const Sample = ({ weight, size, label }) => (
+  <div style={{
+    fontFamily: '"Figtree", sans-serif',
+    fontWeight: weight,
+    fontSize: size || '24px',
+    padding: '12px 0',
+    borderBottom: '1px solid rgba(15,15,15,0.06)',
+    display: 'flex',
+    alignItems: 'baseline',
+    gap: '16px',
+  }}>
+    <span style={{ minWidth: '60px', fontSize: '13px', color: 'rgba(15,15,15,0.4)', fontWeight: 400 }}>{label}</span>
+    <span>The quick brown fox jumps over the lazy dog</span>
+  </div>
+);
+
+## Weights
+
+<Sample weight={300} label="300" />
+<Sample weight={400} label="400" />
+<Sample weight={500} label="500" />
+<Sample weight={600} label="600" />
+<Sample weight={700} label="700" />
+<Sample weight={800} label="800" />
+<Sample weight={900} label="900" />
+
+## Scale
+
+export const ScaleSample = ({ size, label }) => (
+  <div style={{
+    fontFamily: '"Figtree", sans-serif',
+    fontSize: size,
+    fontWeight: 500,
+    padding: '8px 0',
+    borderBottom: '1px solid rgba(15,15,15,0.06)',
+    display: 'flex',
+    alignItems: 'baseline',
+    gap: '16px',
+  }}>
+    <code style={{ minWidth: '80px', fontSize: '13px', color: 'rgba(15,15,15,0.4)', fontWeight: 400 }}>{label}</code>
+    <span>Ticker Tape News</span>
+  </div>
+);
+
+<ScaleSample size="12px" label="12px" />
+<ScaleSample size="14px" label="14px" />
+<ScaleSample size="16px" label="16px" />
+<ScaleSample size="20px" label="20px" />
+<ScaleSample size="24px" label="24px" />
+<ScaleSample size="32px" label="32px" />
+<ScaleSample size="48px" label="48px" />
+
+---
+
+### Load font
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+```
+
+```css
+body {
+  font-family: 'Figtree', sans-serif;
+}
+```

@@ -1,0 +1,70 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Colors" />
+
+# Colors
+
+The Atlas color palette.
+
+export const Swatch = ({ name, hex }) => (
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '16px',
+    padding: '12px 0',
+    borderBottom: '1px solid rgba(15,15,15,0.06)',
+  }}>
+    <div style={{
+      width: '48px',
+      height: '48px',
+      borderRadius: '8px',
+      backgroundColor: hex,
+      border: '1px solid rgba(15,15,15,0.08)',
+      flexShrink: 0,
+    }} />
+    <div>
+      <div style={{ fontWeight: 600, fontSize: '15px' }}>{name}</div>
+      <code style={{ fontSize: '13px', color: 'rgba(15,15,15,0.5)' }}>{hex}</code>
+    </div>
+  </div>
+);
+
+## Accent
+
+<Swatch name="Yellow" hex="#F6FF00" />
+<Swatch name="Purple" hex="#9500FF" />
+<Swatch name="Blue" hex="#00AAFF" />
+
+## Surface
+
+<Swatch name="Surface Light" hex="#F4F4F4" />
+<Swatch name="Surface Dark" hex="#333333" />
+
+## Text
+
+<Swatch name="Text Primary" hex="#0F0F0F" />
+<Swatch name="Text Light" hex="#FAFAFA" />
+
+---
+
+### Usage
+
+```js
+import { colors } from '@atlas/tokens';
+
+// colors.yellow   → '#F6FF00'
+// colors.purple   → '#9500FF'
+// colors.blue     → '#00AAFF'
+```
+
+```css
+:root {
+  --yellow: #F6FF00;
+  --purple: #9500FF;
+  --blue: #00AAFF;
+  --bg-surface: #F4F4F4;
+  --bg-surface-dark: #333333;
+  --text-primary: #0F0F0F;
+  --text-light: #FAFAFA;
+}
+```

@@ -1,3 +1,4 @@
+import { create } from 'storybook/theming';
 import { fontUrl, typography } from '../src/tokens/typography.js';
 import { colors } from '../src/tokens/colors.js';
 
@@ -11,6 +12,16 @@ document.head.appendChild(link);
 document.body.style.fontFamily = typography.fontFamily;
 document.body.style.color = colors.text;
 
+const docsTheme = create({
+  base: 'light',
+  fontBase: '"Figtree", sans-serif',
+  fontCode: 'monospace',
+  textColor: '#0F0F0F',
+  textMutedColor: 'rgba(15,15,15,0.5)',
+  colorPrimary: '#9500FF',
+  colorSecondary: '#9500FF',
+});
+
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
   parameters: {
@@ -20,12 +31,8 @@ const preview = {
         date: /Date$/i,
       },
     },
-    backgrounds: {
-      default: 'light',
-      values: [
-        { name: 'light', value: colors.background },
-        { name: 'dark', value: '#1a1a1a' },
-      ],
+    docs: {
+      theme: docsTheme,
     },
   },
 };

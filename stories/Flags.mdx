@@ -1,0 +1,94 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Assets/Flags" />
+
+# Flags
+
+271 SVG country flags in two aspect ratios, named by ISO 3166-1 alpha-2 code.
+
+export const Flag = ({ code, name }) => (
+  <div style={{
+    display: 'inline-flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '6px',
+    padding: '12px',
+    borderRadius: '8px',
+    width: '90px',
+    textAlign: 'center',
+  }}>
+    <img
+      src={`https://tickertapenews.github.io/atlas/flags/4x3/${code}.svg`}
+      alt={name}
+      style={{ width: '48px', height: '36px', borderRadius: '3px', border: '1px solid rgba(15,15,15,0.08)' }}
+    />
+    <div style={{ fontSize: '12px', fontWeight: 600 }}>{code.toUpperCase()}</div>
+    <div style={{ fontSize: '11px', color: 'rgba(15,15,15,0.45)' }}>{name}</div>
+  </div>
+);
+
+## Nordic
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+  <Flag code="se" name="Sverige" />
+  <Flag code="no" name="Norge" />
+  <Flag code="dk" name="Danmark" />
+  <Flag code="fi" name="Finland" />
+  <Flag code="is" name="Island" />
+</div>
+
+## Europe
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+  <Flag code="gb" name="UK" />
+  <Flag code="de" name="Tyskland" />
+  <Flag code="fr" name="Frankrike" />
+  <Flag code="nl" name="Nederländerna" />
+  <Flag code="ch" name="Schweiz" />
+  <Flag code="it" name="Italien" />
+  <Flag code="es" name="Spanien" />
+  <Flag code="pt" name="Portugal" />
+  <Flag code="at" name="Österrike" />
+  <Flag code="be" name="Belgien" />
+  <Flag code="ie" name="Irland" />
+  <Flag code="pl" name="Polen" />
+  <Flag code="eu" name="EU" />
+</div>
+
+## Americas
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+  <Flag code="us" name="USA" />
+  <Flag code="ca" name="Kanada" />
+  <Flag code="br" name="Brasilien" />
+  <Flag code="mx" name="Mexiko" />
+  <Flag code="ar" name="Argentina" />
+</div>
+
+## Asia & Pacific
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+  <Flag code="jp" name="Japan" />
+  <Flag code="cn" name="Kina" />
+  <Flag code="kr" name="Sydkorea" />
+  <Flag code="in" name="Indien" />
+  <Flag code="au" name="Australien" />
+  <Flag code="sg" name="Singapore" />
+  <Flag code="hk" name="Hongkong" />
+  <Flag code="tw" name="Taiwan" />
+</div>
+
+---
+
+### Formats
+
+| Aspect | Path | Use case |
+|--------|------|----------|
+| 4:3 | `/flags/4x3/{code}.svg` | Standard flag |
+| 1:1 | `/flags/1x1/{code}.svg` | Icons, avatars |
+
+### Usage
+
+```html
+<img src="https://tickertapenews.github.io/atlas/flags/4x3/se.svg" alt="SE" width="24">
+```
