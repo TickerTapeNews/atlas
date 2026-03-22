@@ -2,12 +2,62 @@
 
 Welcome to **Atlas** — the shared design system for [TickerTape News](https://tickertapenews.io) and The Desk.
 
-## Getting started
-
-Add components, tokens (colors, typography), and stories to build out the design system.
-
-### Structure
+## Structure
 
 - `src/components/` — React components
 - `src/tokens/` — Design tokens (colors, typography, spacing, etc.)
-- `stories/` — Storybook stories
+- `public/flags/` — SVG country flag icons
+
+## Flags
+
+271 SVG flags available in two aspect ratios, named by ISO 3166-1 alpha-2 country code (lowercase).
+
+| Format | Path | Use case |
+|--------|------|----------|
+| 4:3 | `/flags/4x3/{code}.svg` | Standard flag shape |
+| 1:1 | `/flags/1x1/{code}.svg` | Avatars, icons, circular crops |
+
+### Usage from The Desk / tickertapenews.io
+
+```html
+<!-- Swedish flag, 4:3 -->
+<img src="https://tickertapenews.github.io/atlas/flags/4x3/se.svg" alt="SE" width="24">
+
+<!-- US flag, square -->
+<img src="https://tickertapenews.github.io/atlas/flags/1x1/us.svg" alt="US" width="20">
+```
+
+### Common codes
+
+| Code | Country |
+|------|---------|
+| `se` | Sverige |
+| `us` | USA |
+| `gb` | Storbritannien |
+| `de` | Tyskland |
+| `jp` | Japan |
+| `no` | Norge |
+| `dk` | Danmark |
+| `fi` | Finland |
+
+## Font
+
+The design system uses **Figtree** (Google Fonts), loaded via:
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+```
+
+## Colors
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `yellow` | `#F6FF00` | Accent |
+| `purple` | `#9500FF` | Accent |
+| `blue` | `#00AAFF` | Accent |
+| `surfaceLight` | `#F4F4F4` | Light background |
+| `surfaceDark` | `#333333` | Dark background |
+| `textPrimary` | `#0F0F0F` | Body text |
+| `textLight` | `#FAFAFA` | Text on dark |
