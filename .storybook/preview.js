@@ -7,6 +7,10 @@ link.rel = 'stylesheet';
 link.href = fontUrl;
 document.head.appendChild(link);
 
+// Apply font globally
+document.body.style.fontFamily = typography.fontFamily;
+document.body.style.color = colors.text;
+
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
   parameters: {
@@ -24,13 +28,6 @@ const preview = {
       ],
     },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ fontFamily: typography.fontFamily, color: colors.text }}>
-        <Story />
-      </div>
-    ),
-  ],
 };
 
 export default preview;
